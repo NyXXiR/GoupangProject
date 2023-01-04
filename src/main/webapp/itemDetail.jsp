@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title><% <!--제품명 입력받는 곳--> 상세 페이지 %></title>
 </head>
 <body>
 
