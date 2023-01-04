@@ -28,14 +28,16 @@ height: 500px;}
 	<div><!-- 제품명 입력 --></div>
 	<div><!-- 제품가격 입력 --></div>
 	<div><!-- 할인율 입력 --></div>
-	<div><!-- 할인적용가격 입력 --></div>
+	<div><!-- 할인적용가격 입력.... --></div>
 </div>
+
 
 	</section>
 	<section id=itemDescription></section>
 	<section id=itemReply></section>
 </article>
 
+<article>
 
 </article>
 
