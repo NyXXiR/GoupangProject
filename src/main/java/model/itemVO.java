@@ -2,13 +2,24 @@ package model;
 
 public class itemVO {
 
-  private String seq;
+  private int seq;
   private String name;
-  private String price;
-  private String discount;
+  private int price;
+  private int discount;
   private String seller_id;
   private String date;
   private String category;
+
+
+
+  public itemVO(String name, int price, int discount, String seller_id, String category) {
+
+this.name=name;
+this.price=price;
+this.discount=discount;
+this.seller_id=seller_id;
+this.category=category;
+  }
 
   @Override
   public String toString() {
@@ -16,11 +27,11 @@ public class itemVO {
         + ", seller_id=" + seller_id + ", date=" + date + ", category=" + category + "]";
   }
 
-  public String getSeq() {
+  public int getSeq() {
     return seq;
   }
 
-  public void setSeq(String seq) {
+  public void setSeq(int seq) {
     this.seq = seq;
   }
 
@@ -32,19 +43,19 @@ public class itemVO {
     this.name = name;
   }
 
-  public String getPrice() {
+  public int getPrice() {
     return price;
   }
 
-  public void setPrice(String price) {
+  public void setPrice(int price) {
     this.price = price;
   }
 
-  public String getDiscount() {
+  public int getDiscount() {
     return discount;
   }
 
-  public void setDiscount(String discount) {
+  public void setDiscount(int discount) {
     this.discount = discount;
   }
 

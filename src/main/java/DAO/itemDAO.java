@@ -2,6 +2,7 @@ package DAO;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+import model.itemVO;
 import mybatis.Mybatis;
 
 public class itemDAO {
@@ -14,7 +15,10 @@ public class itemDAO {
     session = sqlSessionFactory.openSession(true);
   }
 
-  public String findAll() {
-    return session.selectOne("Mapper.fineAll");
+  public itemVO findAll() {
+    return session.selectOne("Mapper.findAll");
   }
+  
+  
+  
 }

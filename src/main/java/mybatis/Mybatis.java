@@ -15,6 +15,7 @@ public class Mybatis {
       // src 밑의 mybatis-config.xml 파일을 인식
       String resource = "mybatis/mybatis-config.xml";
 
+
       InputStream inputStream = Resources.getResourceAsStream(resource);
       sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 
