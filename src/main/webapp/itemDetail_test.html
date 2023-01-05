@@ -10,52 +10,63 @@
 <style>
 *{
 border: 1px solid black;
-box-sizing: border-box;}
+box-sizing: border-box;
+padding:0px;
+margin:0px;
 
+}
 #item-container{
 }
 
 #itemImg{
 width: 500px;
-height: 500px;}
+height: 500px;
+background-color:tomato;
+display: inline;
 
+}
 .text-small{
 
+}
+#itemDetail-text > *{
+    display:inline;
 }
 
 </style>
 </head>
-
-
+<body>
 <article id=item-container>
 	<section id=item-info>
 	<!-- 이미지파일명은 item의 PK와 일치해야 함 -->
 	<figure id="itemImg"><img src="./resources/1.jpg" alt=""/>
 	<div><!-- 판매자id 입력 --></div>
 	</figure>
-	<span class="itemDetail-text">
+	<span id="itemDetail-text">
 	<div id="itemDetail" class="text-small"></div>
-	<div id="itemDetail-category" class="text-medium"><!-- 대분류 입력 --></div>
-	<div id="itemDetail-name" class="text-large"><!-- 제품명 입력 --></div>
-	<div id="itemDetail-price" class="text-small"><!-- 제품가격 입력 --></div>
-	<div id="itemDetail-discount" class="text-medium"><!-- 할인율 입력 --></div>
-	<div id="itemDetail-discountPrice" class="text-large"><!-- 할인적용가격 입력.... --></div>
+	<div id="itemDetail-category" class="text-medium"><!-- 대분류 입력 -->대분류</div>
+	<div id="itemDetail-name" class="text-large"><!-- 제품명 입력 -->제품명</div>
+	<div id="itemDetail-price" class="text-small"><!-- 제품가격 입력 -->30,000</div>
+	<div id="itemDetail-discount" class="text-medium"><!-- 할인율 입력 -->10%</div>
+	<div id="itemDetail-discountPrice" class="text-large"><!-- 할인적용가격 입력.... -->27,000</div>
 	</span>
 
 
 
 	</section>
 	<section id=itemDescription>
+        <h1>제품 설명</h1>
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi cumque quisquam culpa perspiciatis doloremque iste exercitationem repellat tempora alias doloribus. Pariatur perspiciatis aspernatur repudiandae harum corporis eaque minus modi repellendus?</p>
 	</section>
-	<section id=itemReply></section>
+	<section id=itemReply>댓글란</section>
 </article>
+
+
+
+
 
 <article>
-
 </article>
 
-<body>
 
 
 
