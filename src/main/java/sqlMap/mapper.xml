@@ -4,7 +4,7 @@
 <!-- 네임스페이스 설정 -->
 
 <mapper namespace="Mapper">
-<select id="findAll" resultType="itemVO">
+<select id="findAll" resultType="String">
 select * from itemDB;
 </select>
 

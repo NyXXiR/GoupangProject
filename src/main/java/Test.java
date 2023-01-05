@@ -6,7 +6,7 @@ public class Test {
     // TODO Auto-generated method stub
 
     itemDAO dao = new itemDAO();
-    String name = dao.searchName("a");
+    String name = dao.findAll();
     System.out.println(name);
   }
 

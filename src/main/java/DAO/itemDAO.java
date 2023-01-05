@@ -14,7 +14,7 @@ public class itemDAO {
     session = sqlSessionFactory.openSession(true);
   }
 
-  public String searchName(String name) {
-    return session.selectOne("itemDB.searchName", name);
+  public String findAll() {
+    return session.selectOne("Mapper.fineAll");
   }
 }
