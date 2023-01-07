@@ -77,7 +77,7 @@ display:flex;}
             <button class="quantity-plus" type="button" onclick="valuePlus(1)">수량  +  </button>
         </div>
         <div class="buy-action">
-        <button class="add-to-cart" type="button" onclick="console.log('장바구니버튼. 1.cartItemDB로 제품id, 수량정보 생성 2.ajax 사용해 장바구니에 담겼습니다 메시지 생성')">장바구니 담기</button
+        <button class="add-to-cart" type="button" onclick="console.log('장바구니버튼. 1.cartItemDB로 제품id, 수량정보 생성 2.ajax 사용해 장바구니에 담겼습니다 메시지 생성')">장바구니 담기</button>
 <!--  
 1. 받아야 할 정보들을 모아둔다
 상세정보보기 페이지에서 해당 제품의 itemDB 정보를 미리 받아둬야 편함.
