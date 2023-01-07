@@ -25,6 +25,11 @@ background-color:tomato;
 display: flex;
 
 }
+.prod-buy-quantity .prod-quantity__form {
+    display: table;
+    width: auto;
+    border: 1px solid #ccc;
+    }
 .text-small{
 font-size:10px;
 }
@@ -41,7 +46,12 @@ font-size:10px;
 	display:flex;
 justify-content: center;
 }
+.prod-quantity__input{
+display:inline;
+}
 
+.buy-action{
+display:flex;}
 </style>
 </head>
 !!헤더위치!!
@@ -59,11 +69,17 @@ justify-content: center;
 	<div id="itemDetail-price" class="text-small"><!-- 제품가격 입력 -->30,000</div>
 	<div id="itemDetail-discount" class="text-medium"><!-- 할인율 입력 -->10%</div>
 	<div id="itemDetail-discountPrice" class="text-large"><!-- 할인적용가격 입력.... -->27,000</div>
-<div id="buttons">
-	<input type="button" value="장바구니">
-	<input type="button" value="바로구매">
+<div class="prod-quantity__form">
+        <input type="text" value="1" class="prod-quantity__input" readonly="true"  >
+            <button class="prod-quantity__plus" type="button">수량 -  </button>
+            <button class="prod-quantity__minus" type="button">수량  +  </button>
+        </div>
+        <div class="buy-action">
+        <button class="add-to-cart" type="button">장바구니 담기</button>
+       <button class="go-to-buypage" tyep="button">바로구매</button>
+        </div>
+        
 	</div>
-	</div>	
 	
 </span>
 
@@ -92,5 +108,12 @@ justify-content: center;
 
 
 
+<script>
+
+function toCartPage(frm){
+	frm.action='cartPage.jsp';
+	
+}
+</script>
 </body>
 </html>
