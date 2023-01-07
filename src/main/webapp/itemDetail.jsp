@@ -25,7 +25,7 @@ background-color:tomato;
 display: flex;
 
 }
-.prod-buy-quantity .prod-quantity__form {
+.prod-buy-quantity .quantity-count {
     display: table;
     width: auto;
     border: 1px solid #ccc;
@@ -46,13 +46,15 @@ font-size:10px;
 	display:flex;
 justify-content: center;
 }
-.prod-quantity__input{
+.prod-quantity__form{
 display:inline;
 }
 
 .buy-action{
 display:flex;}
 </style>
+
+
 </head>
 !!헤더위치!!
 <body>
@@ -70,13 +72,24 @@ display:flex;}
 	<div id="itemDetail-discount" class="text-medium"><!-- 할인율 입력 -->10%</div>
 	<div id="itemDetail-discountPrice" class="text-large"><!-- 할인적용가격 입력.... -->27,000</div>
 <div class="prod-quantity__form">
-        <input type="text" value="1" class="prod-quantity__input" readonly="true"  >
-            <button class="prod-quantity__plus" type="button">수량 -  </button>
-            <button class="prod-quantity__minus" type="button">수량  +  </button>
+        <input type="text" value="1" class="quantity-count" readonly="true"  >
+            <button class="quantity-minus" type="button" onclick="valueMinus(1)">수량 -  </button>
+            <button class="quantity-plus" type="button" onclick="valuePlus(1)">수량  +  </button>
         </div>
         <div class="buy-action">
-        <button class="add-to-cart" type="button">장바구니 담기</button>
-       <button class="go-to-buypage" tyep="button">바로구매</button>
+        <button class="add-to-cart" type="button" onclick="console.log('장바구니버튼. 1.cartItemDB로 제품id, 수량정보 생성 2.ajax 사용해 장바구니에 담겼습니다 메시지 생성')">장바구니 담기</button
+<!--  
+1. 받아야 할 정보들을 모아둔다
+상세정보보기 페이지에서 해당 제품의 itemDB 정보를 미리 받아둬야 편함.
+로그인id = session.getAttribute("signedUser")
+제품정보 = seq
+quantity = .quantity-count의 value값
+
+
+2. ajax로 장바구니에 담겼습니다. 팝업과 구매페이지로 이동하기 버튼을 띄운다. 구매하기로 이동하기 버튼은 바로구매에 다시 사용한다.
+ -->
+
+       <button class="go-to-buypage" type="button" onclick="console.log('json에 id,quantity 담아 구매페이지로 이동')">바로구매</button>
         </div>
         
 	</div>
@@ -97,23 +110,26 @@ display:flex;}
 	<section id=itemReply>댓글란</section>
 </article>
 
-
-
-
-
 <article>
 </article>
 
 
-
-
-
 <script>
 
+function valuePlus(num){
+	var cnt =document.querySelector(".quantity-count");
+	cnt.value= parseInt(cnt.value)+num;
+	}
+function valueMinus(num){
+		var cnt =document.querySelector(".quantity-count");
+		cnt.value= parseInt(cnt.value)-num;
+	}
+
 function toCartPage(frm){
-	frm.action='cartPage.jsp';
-	
+	frm.action='cartPage.jsp'
 }
+	
 </script>
+
 </body>
 </html>
