@@ -65,7 +65,7 @@ display:flex;}
 
 
 </head>
-!!헤더위치!!
+<jsp:include page="header.jsp" flush="false"/>
 <body>
 <article id=itemDetail-container>
 	<section id=itemDetail-info>
