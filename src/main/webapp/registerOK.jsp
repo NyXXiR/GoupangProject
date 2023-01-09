@@ -1,4 +1,5 @@
-<%@page import="jdbc.*"%>
+<%@page import="model.*"%>
+<%@page import="DAO.*"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -9,14 +10,15 @@
 </head>
 <body>
 	<%
-	Dao dao = Dao.getInstance();
-
+	LoginRegisterDao dao = LoginRegisterDao.getInstance();
+	
+	String num;
 	String userID = request.getParameter("userID");
 	String userName = request.getParameter("userName");
 	String userPassword = request.getParameter("userPassword");
 
 	if (userID != "" && userName != "" && userPassword != "") {
-		UserVO userVO = new UserVO(userID, userName, userPassword);
+		buyerVO userVO = new buyerVO(num, userID, userName, userPassword);
 		dao.insertEmpTemp(userVO);
 	%>
 		<script>

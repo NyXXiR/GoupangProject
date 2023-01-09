@@ -1,4 +1,5 @@
-<%@page import="jdbc.Dao"%>
+<%@page import="DAO.*"%>
+
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -9,7 +10,7 @@
 </head>
 <body>
 	<%
-	Dao dao = Dao.getInstance();
+	LoginRegisterDao dao = LoginRegisterDao.getInstance();
 
 	String enteredID = request.getParameter("userID");
 	String enteredPassword = request.getParameter("userPassword");

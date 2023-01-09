@@ -1,5 +1,7 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,20 +29,18 @@
         <div class="upper-header-white">
           <div class="header-left-box">
             <img src="./resources/menu1.png" class="left-slide-btn" onclick="openNav()" />
-            <img src="./resources/goupang.jpg" class="logo" alt="" />
+            <img src="./resources/goupang.jpg" class="logo" alt="	" />
           </div>
           <div class="header-middle-box">
-            <form action="">
               <select name="" id="">
                 <option value="">전체</option>
                 <option value="">판매자</option>
                 <option value="">상품명</option>
                 <option value="">???</option>
               </select>
-            </form>
-            <input type="text" class="search-bar" placeholder="search" />
-            <div class="search-img-box">
-              <a href=""><img src="./resources/search.png" alt="" class="search-img" /></a>
+              <div class="search-box">
+            	<input type="text" class="search-bar" placeholder="" />
+                <a href=""><img src="./resources/search.png" alt="" class="search-img" /></a>
             </div>
           </div>
           <div class="header-right-box">
