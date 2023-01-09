@@ -41,18 +41,18 @@
 
 	<center>
 		<div>
-			<img class="slide1" src="image/slide01.jpg"> <img
-				class="slide1" src="image/slide02.jpg"> <img class="slide1"
-				src="image/slide03.jpg">
+			<img class="slide1" src="resources/slide01.jpg"> <img
+				class="slide1" src="resources/slide02.jpg"> <img class="slide1"
+				src="resources/slide03.jpg">
 		</div>
 
 		<table>
 			<tr>
-				<td><img alt="" src="image/석류.jpg" onmouseenter="zoomIn(event)"
+				<td><img alt="" src="resources/석류.jpg" onmouseenter="zoomIn(event)"
 					onmouseleave="zoomOut(event)" /></td>
-				<td><img alt="" src="image/석류.jpg" onmouseenter="zoomIn(event)"
+				<td><img alt="" src="resources/석류.jpg" onmouseenter="zoomIn(event)"
 					onmouseleave="zoomOut(event)" /></td>
-				<td><img alt="" src="image/석류.jpg" onmouseenter="zoomIn(event)"
+				<td><img alt="" src="resources/석류.jpg" onmouseenter="zoomIn(event)"
 					onmouseleave="zoomOut(event)" /></td>
 			<tr>
 		</table>
@@ -62,11 +62,11 @@
 
 		<table>
 			<tr>
-				<td><img alt="" src="image/석류.jpg" onmouseenter="zoomIn(event)"
+				<td><img alt="" src="resources/석류.jpg" onmouseenter="zoomIn(event)"
 					onmouseleave="zoomOut(event)" /></td>
-				<td><img alt="" src="image/석류.jpg" onmouseenter="zoomIn(event)"
+				<td><img alt="" src="resources/석류.jpg" onmouseenter="zoomIn(event)"
 					onmouseleave="zoomOut(event)" /></td>
-				<td><img alt="" src="image/석류.jpg" onmouseenter="zoomIn(event)"
+				<td><img alt="" src="resources/석류.jpg" onmouseenter="zoomIn(event)"
 					onmouseleave="zoomOut(event)" /></td>
 			<tr>
 				<div class="b-example-divider"></div>
@@ -77,20 +77,20 @@
 
 		<table>
 			<tr>
-				<td><img alt="" src="image/석류.jpg" onmouseenter="zoomIn(event)"
+				<td><img alt="" src="resources/석류.jpg" onmouseenter="zoomIn(event)"
 					onmouseleave="zoomOut(event)" /></td>
-				<td><img alt="" src="image/석류.jpg" onmouseenter="zoomIn(event)"
+				<td><img alt="" src="resources/석류.jpg" onmouseenter="zoomIn(event)"
 					onmouseleave="zoomOut(event)" /></td>
-				<td><img alt="" src="image/석류.jpg" onmouseenter="zoomIn(event)"
+				<td><img alt="" src="resources/석류.jpg" onmouseenter="zoomIn(event)"
 					onmouseleave="zoomOut(event)" /></td>
 			<tr>
 				<div class="b-example-divider"></div>
 		</table>
-		<div class="b-example-divider"></div>
 		<div id="detail">
 			석류</br>10,000원
 		</div>
 		</tr>
+		<div class="b-example-divider"></div>
 		</table>
 
 		<script>
