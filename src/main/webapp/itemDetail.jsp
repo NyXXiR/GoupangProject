@@ -1,5 +1,14 @@
+<%@ page import="model.itemVO" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+  <% itemVO vo =new itemVO(3,"아이패드",150000,0,"lgh0334","2023-01-09 16:25:39.000","전자기기");
+  
+  int discounted = vo.getPrice()/100*(100-vo.getDiscount());
+  
+  %>  
+    
+    
 <!DOCTYPE html>
 <html>
 
@@ -66,11 +75,11 @@ display:flex;}
 	</figure>
 	<span id="itemDetail-text">
 	<div id="itemDetail">
-	<div id="itemDetail-category" class="text-medium"><!-- 대분류 입력 -->대분류</div>
-	<div id="itemDetail-name" class="text-large"><!-- 제품명 입력 -->제품명</div>
-	<div id="itemDetail-price" class="text-small"><!-- 제품가격 입력 -->30,000</div>
-	<div id="itemDetail-discount" class="text-medium"><!-- 할인율 입력 -->10%</div>
-	<div id="itemDetail-discountPrice" class="text-large"><!-- 할인적용가격 입력.... -->27,000</div>
+	<div id="itemDetail-category" class="text-medium"><!-- 대분류 입력 --><%= vo.getCategory() %></div>
+	<div id="itemDetail-name" class="text-large"><!-- 제품명 입력 --><%= vo.getName() %></div>
+	<div id="itemDetail-price" class="text-small"><!-- 제품가격 입력 -->제품가격: <%= vo.getPrice() %></div>
+	<div id="itemDetail-discount" class="text-medium"><!-- 할인율 입력 -->할인율: <%= vo.getDiscount() %> </div>
+	<div id="itemDetail-discountPrice" class="text-large"><!-- 할인적용가격 입력.... -->할인적용가격: <%= discounted %></div>
 <div class="prod-quantity__form">
         <input type="text" value="1" class="quantity-count" readonly="true"  >
             <button class="quantity-minus" type="button" onclick="valueMinus(1)">수량 -  </button>
