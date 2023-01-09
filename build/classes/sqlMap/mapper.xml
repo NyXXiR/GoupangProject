@@ -4,18 +4,22 @@
 <!-- 네임스페이스 설정 -->
 <!-- 절대 SQL 구문 끝에 ;(세미콜론)을 넣지 마시오 -->
 <mapper namespace="Mapper">
-<insert id="remove" parameterType="java.lang.String">
+<insert id="remove" parameterType="String">
 delete from itemDB where name=#{id}
 </insert>
 
 <insert id="add" parameterType="model.itemVO">
-insert into itemDB values(item_seq.nextval, #{name},#{price},#{discount},#{seller_id},#{category}, sysdate)
+insert into itemDB values(item_seq.nextval, #{name},#{price},#{discount},#{seller_id}, sysdate,#{category})
 </insert>
 
 
-<select id="findAll" resultType="model.itemVO">
+<select id="selectAll" resultType="model.itemVO">
 select * from itemDB
 </select>
 
+
+  <select id="selectName" parameterType="int" resultType="string">
+       SELECT name FROM itemDB WHERE seq = #{seq}
+    </select>
 
 </mapper>

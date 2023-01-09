@@ -12,13 +12,16 @@ public class itemVO {
 
 
 
-  public itemVO(String name, int price, int discount, String seller_id, String category) {
+  public itemVO(int seq, String name, int price, int discount, String seller_id, String date,
+      String category) {
+    this.seq = seq;
+    this.name = name;
+    this.price = price;
+    this.discount = discount;
+    this.seller_id = seller_id;
+    this.date = date;
+    this.category = category;
 
-this.name=name;
-this.price=price;
-this.discount=discount;
-this.seller_id=seller_id;
-this.category=category;
   }
 
   @Override
