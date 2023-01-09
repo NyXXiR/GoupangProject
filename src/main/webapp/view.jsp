@@ -9,6 +9,10 @@
 <body>
 
 <jsp:include page="header.jsp" flush="false"/>
+<<<<<<< Updated upstream
+<jsp:include page="featuredDetail.jsp" flush="false"/>
+=======
+>>>>>>> Stashed changes
 <jsp:include page="body.jsp" flush="false"/>
 
 

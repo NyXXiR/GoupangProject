@@ -3,6 +3,7 @@ package model;
 public class buyerVO {
   private String buyerSeq;
   private String buyerId;
+  private String buyerPw;
 
   @Override
   public String toString() {
@@ -33,5 +34,4 @@ public class buyerVO {
     this.buyerPw = buyerPw;
   }
 
-  private String buyerPw;
 }
