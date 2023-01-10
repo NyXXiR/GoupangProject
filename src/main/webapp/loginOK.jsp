@@ -14,10 +14,7 @@
 
 	String enteredID = request.getParameter("userID");
 	String enteredPassword = request.getParameter("userPassword");
-	/* session.setAttribute("MID", "ok"); 로그인 성공시 세션에 설정값 주기.*/
-	/* 해당 설정값이 ok면 로그인 버튼 대신 로그아웃 버튼 출력 */
 	/* 로그아웃 버튼 누르면 세션 설정값 해제. session.invalidate() 이용*/
-	
 	
 		if(dao.FindByUserIDandUserPassword(enteredID, enteredPassword)) {
 			
@@ -25,7 +22,7 @@
 			%>
 			<script> 
 				alert("<%= request.getParameter("userID")%> 님 환영합니다");
-				window.location.href = 'header.jsp';
+				window.location.href = 'header/header.jsp';
 			</script>
 			<%} else { %>
 				<script>

@@ -10,10 +10,15 @@
 <link rel="stylesheet" href="headerCSS.css" />
 </head>
 <body>
+<%
+Object userID = session.getAttribute("LoginStatus");
+session.invalidate();
+%>
+
 <div id="left-slide-container">
       <div class="close-btn-box">
         <img
-          src="./resources/header/close.png"
+          src="../resources/close.png"
           class="slide-close-btn"
           onclick="closeNav()"
           alt=""
@@ -28,8 +33,8 @@
       <div class="container">
         <div class="upper-header-white">
           <div class="header-left-box">
-            <img src="./resources/header/menu1.png" class="left-slide-btn" onclick="openNav()" />
-            <img src="./resources/header/goupang.jpg" class="logo" alt="	" />
+            <img src="../resources/menu1.png" class="left-slide-btn" onclick="openNav()" />
+            <img src="../resources/goupang.jpg" class="logo" alt="	" />
           </div>
           <div class="header-middle-box">
               <select name="" id="">
@@ -40,45 +45,44 @@
               </select>
               <div class="search-box">
             	<input type="text" class="search-bar" placeholder="" />
-                <a href=""><img src="./resources/header/search.png" alt="" class="search-img" /></a>
+                <a href=""><img src="../resources/search.png" alt="" class="search-img" /></a>
             </div>
           </div>
           <div class="header-right-box">
             <ul class="menu-bar">
               <li>
                 <a href="#"
-                  ><img src="./resources/header/account.png" alt="" class="account-img"
+                  ><img src="../resources/account.png" alt="" class="account-img"
                 /></a>
                 <div class="detail-box">
                   <ul class="drop-menu-1">
-                    <a href="./webapp/myPage.jsp"><li>회원 정보</li></a>
-                    <a href="./webapp/myPage.jsp"><li>메뉴 1</li></a>
-                    <a href="./webapp/myPage.jsp"><li>메뉴 2</li></a>
-                    <a href="./webapp/myPage.jsp"><li>메뉴 3</li></a>
+                    <a href="../myPage.jsp"><li>회원 정보</li></a>
+                    <a href="../myPage.jsp"><li>메뉴 1</li></a>
+                    <a href="../myPage.jsp"><li>메뉴 2</li></a>
+                    <a href="../myPage.jsp"><li>메뉴 3</li></a>
                   </ul>
                 </div>
               </li>
               <li>
-                <a href="#"><img src="./resources/header/home.png" alt="" class="home-img" /></a>
+                <a href="#"><img src="../resources/home.png" alt="" class="home-img" /></a>
               </li>
               <li>
-                <a href="#"><img src="./resources/header/cart.png" alt="" class="cart-img" /></a>
+                <a href="#"><img src="../resources/cart.png" alt="" class="cart-img" /></a>
               </li>
               <li class="drop2">
-                <a href=""><img src="./resources/header/menu.png" alt="" class="menu-img" /></a>
+                <a href=""><img src="../resources/menu.png" alt="" class="menu-img" /></a>
                 <div class="detail-box2">
                   <ul class="drop-menu-2">
                   <%
-                  Object userID = session.getAttribute("LoginStatus");
-                  if(userID != null || userID != "") {%>
-                	  <a href="#"><li>로그아웃</li></a>
-                  <% } else {
+                  if(userID == null) {%>
+                  	<a href="../login.jsp"><li>로그인</li></a>
+                  <% } else{
                 	  %> 
-                	  <a href="./login.jsp"><li>로그인</li></a>
+                	  <a href="../logout.jsp"><li>로그아웃</li></a>
                 	  <% 
                   }
                   %>
-                    <a href="./webapp/register.jsp"><li>회원가입</li></a>
+                    <a href="../register.jsp"><li>회원가입</li></a>
                   </ul>
                 </div>
               </li>

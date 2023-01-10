@@ -12,18 +12,19 @@
 	<%
 	LoginRegisterDao dao = LoginRegisterDao.getInstance();
 	
-	String num;
+	
 	String userID = request.getParameter("userID");
-	String userName = request.getParameter("userName");
 	String userPassword = request.getParameter("userPassword");
+	String userName = request.getParameter("userName");
 
-	if (userID != "" && userName != "" && userPassword != "") {
-		buyerVO userVO = new buyerVO(num, userID, userName, userPassword);
-		dao.insertEmpTemp(userVO);
+	if (userID != "" && userPassword != "" && userName != "") {
+		buyerVO userVO = new buyerVO(userID, userPassword, userName);
+		dao.signUpBuyer(userVO);
 	%>
 		<script>
 				alert("<%=userName%>님 가입 완료 되었습니다.");
-				window.location.href = 'header.jsp';
+				window.location.href = 'header/header.jsp';
+				
 		</script>
 	<%
 	} else {
