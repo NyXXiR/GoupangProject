@@ -24,9 +24,12 @@ public class Test {
 
     }
 
-
     String a = session.selectOne("selectName", 3);
     System.out.println(a);
+   
+//    String a = session.selectOne("selectPrice", 4);
+//    System.out.println(a);
+    
 
     List<itemVO> list = session.selectList("selectAll");
     System.out.println(list);
