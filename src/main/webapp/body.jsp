@@ -83,8 +83,9 @@ height: 150px;
 	</div>
 
 	<table>
-		
+		<h1>컨테이너이름입력</h1>
 			<div class="flex-container">
+				
 				<div class="flex-item">
 					<img alt="" src="./resources/item/3.jpg" onmouseenter="zoomIn(event)"
 						onmouseleave="zoomOut(event)" />
@@ -103,6 +104,8 @@ height: 150px;
 	
 
 <table>
+		<h1>컨테이너이름입력</h1>
+
 		<div class="flex-container-large">
 			<div class="flex-item">
 				<img alt="" src="./resources/item/12.jpg" onmouseenter="zoomIn(event)"
