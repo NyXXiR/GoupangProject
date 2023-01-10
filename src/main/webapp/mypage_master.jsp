@@ -13,9 +13,7 @@
 
 	<body>
 		<div id="wrap">
-			<header id="header">
-
-			</header>
+			<header id="header"> </header>
 			<section id="main">
 
 				<div id="left">
@@ -42,6 +40,14 @@
 						<table class="pdTable">
 							<tr>
 								<td>
+									<h3>상품번호<% %></h3>
+								</td>
+							</tr>
+						</table>
+
+						<table class="pdTable">
+							<tr>
+								<td>
 									<h3>상품명</h3>
 								</td>
 							</tr>
@@ -60,6 +66,17 @@
 								<td class="pdInput"><input type="text" name="pdPrice"></td>
 							</tr>
 						</table>
+						
+						<table class="pdTable">
+							<tr>
+								<td>
+									<h3>재고수량</h3>
+								</td>
+							</tr>
+							<tr>
+								<td class="pdInput"><input type="text" name="pdPrice"></td>
+							</tr>
+						</table>
 
 						<table class="pdTable">
 							<tr>
@@ -69,9 +86,20 @@
 							</tr>
 							<tr>
 								<td class="pdInputP">
-									<form action="imagesave.jsp" name="imagesave" method="post" enctype="multipart/form-data">
-										<div id="fakeInputP1" class="fakeInputP"></div>
-										<input type="file" name="pdPhoto" accept="image/*" required id="realInputP1">
+									<form action="upload" name="upload1" method="post" enctype="multipart/form-data">
+										<img id="fakeInputP1" class="fakeInputP" ></img>
+										<input type="file" name="pdPhoto" accept="image/*" onchange="readURL1(this)" required
+											id="realInput">
+									</form>
+									<form action="upload" name="upload2" method="post" enctype="multipart/form-data">
+										<img id="fakeInputP2" class="fakeInputP" ></img>
+										<input type="file" name="pdPhoto" accept="image/*" onchange="readURL2(this)" required
+											id="realInput">
+									</form>
+									<form action="upload" name="upload3" method="post" enctype="multipart/form-data">
+										<img id="fakeInputP3" class="fakeInputP" ></img>
+										<input type="file" name="pdPhoto" accept="image/*" onchange="readURL3(this)" required
+											id="realInput">
 									</form>
 								</td>
 							</tr>
@@ -110,33 +138,50 @@
 				xhttp.send();
 			}
 
-
-			$('#fakeInputP1').click(function () {
-				$('#realInputP1').click();
-			})
-			$('#realInputP1').on('change', function (e) {
-				let formData = new FormData();
-
-				let fileInput = $('#realInputP1');
-				let files = fileInput[0].files;
-				console.log(files);
-
-				fileCheck(fileSize);
-				formData.append("uploadFile",fileobj);
-				
-				$.ajax({
-					url: '/uploadAjaxAction',
+			for (let i = 1; i < 4; i++) {
+				$('#fakeInputP' + i).click(function () {
+					$('#realInputP' + i).click();
 				})
-				
-			function fileCheck(FileS) {
-				let maxFileSize = 1048567; //1MB
-				if (maxFileSize <= FileS) {
-					alert("파일 사이즈 초과")
-					return false
+			}
+
+			
+			
+			
+			
+			function readURL1(input) {
+				if (input.files && input.files[0]) {
+					const reader = new FileReader();
+
+					reader.onload = (e) => {
+						const previewImage = document.getElementById('fakeInputP1');
+						previewImage.src = e.target.result;
+					}
+					reader.readAsDataURL(input.files[0]);
 				}
-				return true;
 			}
+			function readURL2(input) {
+				if (input.files && input.files[0]) {
+					const reader = new FileReader();
+
+					reader.onload = (e) => {
+						const previewImage = document.getElementById('fakeInputP2');
+						previewImage.src = e.target.result;
+					}
+					reader.readAsDataURL(input.files[0]);
+				}
 			}
+			function readURL3(input) {
+				if (input.files && input.files[0]) {
+					const reader = new FileReader();
+
+					reader.onload = (e) => {
+						const previewImage = document.getElementById('fakeInputP3');
+						previewImage.src = e.target.result;
+					}
+					reader.readAsDataURL(input.files[0]);
+				}
+			}
+
 		</script>
 
 	</body>
