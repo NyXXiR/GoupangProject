@@ -13,7 +13,7 @@
 <div id="left-slide-container">
       <div class="close-btn-box">
         <img
-          src="./resources/close.png"
+          src="./resources/header/close.png"
           class="slide-close-btn"
           onclick="closeNav()"
           alt=""
@@ -28,8 +28,8 @@
       <div class="container">
         <div class="upper-header-white">
           <div class="header-left-box">
-            <img src="./resources/menu1.png" class="left-slide-btn" onclick="openNav()" />
-            <img src="./resources/goupang.jpg" class="logo" alt="	" />
+            <img src="./resources/header/menu1.png" class="left-slide-btn" onclick="openNav()" />
+            <img src="./resources/header/goupang.jpg" class="logo" alt="	" />
           </div>
           <div class="header-middle-box">
               <select name="" id="">
@@ -40,14 +40,14 @@
               </select>
               <div class="search-box">
             	<input type="text" class="search-bar" placeholder="" />
-                <a href=""><img src="./resources/search.png" alt="" class="search-img" /></a>
+                <a href=""><img src="./resources/header/search.png" alt="" class="search-img" /></a>
             </div>
           </div>
           <div class="header-right-box">
             <ul class="menu-bar">
               <li>
                 <a href="#"
-                  ><img src="./resources/account.png" alt="" class="account-img"
+                  ><img src="./resources/header/account.png" alt="" class="account-img"
                 /></a>
                 <div class="detail-box">
                   <ul class="drop-menu-1">
@@ -59,13 +59,13 @@
                 </div>
               </li>
               <li>
-                <a href="#"><img src="./resources/home.png" alt="" class="home-img" /></a>
+                <a href="#"><img src="./resources/header/home.png" alt="" class="home-img" /></a>
               </li>
               <li>
-                <a href="#"><img src="./resources/cart.png" alt="" class="cart-img" /></a>
+                <a href="#"><img src="./resources/header/cart.png" alt="" class="cart-img" /></a>
               </li>
               <li class="drop2">
-                <a href=""><img src="./resources/menu.png" alt="" class="menu-img" /></a>
+                <a href=""><img src="./resources/header/menu.png" alt="" class="menu-img" /></a>
                 <div class="detail-box2">
                   <ul class="drop-menu-2">
                   <%

@@ -17,7 +17,7 @@ margin:0px;
 	
 	border-radius: 5px;
 	background: #d3d3d3;
-	text-align: center;
+margin:0 auto;
 	display: flex;
 	justify-content: center;
 }
@@ -27,7 +27,7 @@ margin:0px;
 	
 	border-radius: 5px;
 	background: #d3d3d3;
-	text-align: center;
+margin:0 auto;
 	display: flex;
 	justify-content: space-evenly;
 }
