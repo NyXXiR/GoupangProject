@@ -19,7 +19,7 @@
 
 	if (userID != "" && userName != "" && userPassword != "") {
 		buyerVO userVO = new buyerVO(num, userID, userName, userPassword);
-		dao.insertEmpTemp(userVO);
+		dao.registerBuyer(userVO);
 	%>
 		<script>
 				alert("<%=userName%>님 가입 완료 되었습니다.");
