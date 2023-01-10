@@ -70,7 +70,7 @@ display:flex;}
 <article id=itemDetail-container>
 	<section id=itemDetail-info>
 	<!-- 이미지파일명은 item의 PK와 일치해야 함 -->
-	<figure id="itemImg"><img src="./resources/1.jpg" alt=""/>
+	<figure id="itemImg"><img src="./resources/item/1.jpg" alt=""/>
 	<div><!-- 판매자id 입력 --></div>
 	</figure>
 	<span id="itemDetail-text">
