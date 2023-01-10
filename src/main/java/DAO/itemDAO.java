@@ -7,7 +7,6 @@ import mybatis.Mybatis;
 
 public class itemDAO {
 
-
   SqlSessionFactory sqlSessionFactory = Mybatis.getSqlSessionFactory();
   SqlSession session;
 

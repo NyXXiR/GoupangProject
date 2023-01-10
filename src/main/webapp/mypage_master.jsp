@@ -71,8 +71,6 @@
 								<td class="pdInputP">
 									<form action="imagesave.jsp" name="imagesave" method="post" enctype="multipart/form-data">
 										<div id="fakeInputP1" class="fakeInputP"></div>
-										<!-- <div id="fakeInputP2" class="fakeInputP"></div> -->
-										<!-- <div id="fakeInputP3" class="fakeInputP"></div> -->
 										<input type="file" name="pdPhoto" accept="image/*" required id="realInputP1">
 									</form>
 								</td>
@@ -120,11 +118,6 @@
 				let formData = new FormData();
 
 				let fileInput = $('#realInputP1');
-				/*let fileList = fileInput[0].files;
-				let fileobj = fileList[0];
-				let fileName = fileobj.name;
-				let fileSize = fileobj.size;*/
-
 				let files = fileInput[0].files;
 				console.log(files);
 
@@ -143,7 +136,7 @@
 				}
 				return true;
 			}
-
+			}
 		</script>
 
 	</body>
