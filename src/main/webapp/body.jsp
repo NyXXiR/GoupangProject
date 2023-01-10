@@ -13,9 +13,8 @@ padding:0px;
 margin:0px;
 }
 .flex-container {
-	width: 900px;
-	margin: 30px;
-	padding: 30px;
+	width: 500px;
+	
 	border-radius: 5px;
 	background: #d3d3d3;
 	text-align: center;
@@ -23,14 +22,26 @@ margin:0px;
 	justify-content: center;
 }
 
+.flex-container-large {
+	width: 900px;
+	
+	border-radius: 5px;
+	background: #d3d3d3;
+	text-align: center;
+	display: flex;
+	justify-content: space-evenly;
+}
+
 .flex-item {
-;
+width: 150px;
+height: 150px;
 	color: #fff;
 	display: flex;
 	border-radius: 5px;
 	background: #708090;
 	justify-content: center;
-}
+	object-fit:cover;
+	}
 
 .b-example-divider {
 	height: 3rem;
@@ -66,41 +77,51 @@ margin:0px;
 	</script>
 
 	<div>
-		<img class="slide1" src="image/slide01.jpg"> <img class="slide1"
-			src="image/slide02.jpg"> <img class="slide1"
-			src="image/slide03.jpg">
+		<img class="slide1" src="./resources/body/slide01.jpg"> <img class="slide1"
+			src="./resources/body/slide02.jpg"> <img class="slide1"
+			src="./resources/body/slide03.jpg">
 	</div>
 
 	<table>
 		
 			<div class="flex-container">
 				<div class="flex-item">
-					<img alt="" src="image/석류.jpg" onmouseenter="zoomIn(event)"
+					<img alt="" src="./resources/item/3.jpg" onmouseenter="zoomIn(event)"
 						onmouseleave="zoomOut(event)" />
 				</div>
 				<div class="flex-item">
-					<img alt="" src="image/석류.jpg" onmouseenter="zoomIn(event)"
+					<img alt="" src="./resources/item/4.jpg" onmouseenter="zoomIn(event)"
 						onmouseleave="zoomOut(event)" />
 				</div>
 				<div class="flex-item">
-					<img alt="" src="image/석류.jpg" onmouseenter="zoomIn(event)"
+					<img alt="" src="./resources/item/5.jpg" onmouseenter="zoomIn(event)"
 						onmouseleave="zoomOut(event)" />
 				</div>
 				</div>
 	</table>
 
-	<table>
-		<div class="flex-container">
+	
+
+<table>
+		<div class="flex-container-large">
 			<div class="flex-item">
-				<img alt="" src="image/석류.jpg" onmouseenter="zoomIn(event)"
+				<img alt="" src="./resources/item/12.jpg" onmouseenter="zoomIn(event)"
 					onmouseleave="zoomOut(event)" />
 			</div>
 			<div class="flex-item">
-				<img alt="" src="image/석류.jpg" onmouseenter="zoomIn(event)"
+				<img alt="" src="./resources/item/12.jpg" onmouseenter="zoomIn(event)"
 					onmouseleave="zoomOut(event)" />
 			</div>
 			<div class="flex-item">
-				<img alt="" src="image/석류.jpg" onmouseenter="zoomIn(event)"
+				<img alt="" src="./resources/item/12.jpg" onmouseenter="zoomIn(event)"
+					onmouseleave="zoomOut(event)" />
+			</div>
+			<div class="flex-item">
+				<img alt="" src="./resources/item/13.jpg" onmouseenter="zoomIn(event)"
+					onmouseleave="zoomOut(event)" />
+			</div>
+			<div class="flex-item">
+				<img alt="" src="resources/item/14.jpg" onmouseenter="zoomIn(event)"
 					onmouseleave="zoomOut(event)" />
 			</div>
 		</div>
