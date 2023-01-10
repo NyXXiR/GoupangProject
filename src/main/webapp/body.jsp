@@ -89,14 +89,17 @@ height: 150px;
 				<div class="flex-item">
 					<img alt="" src="./resources/item/3.jpg" onmouseenter="zoomIn(event)"
 						onmouseleave="zoomOut(event)" />
+						
 				</div>
 				<div class="flex-item">
 					<img alt="" src="./resources/item/4.jpg" onmouseenter="zoomIn(event)"
 						onmouseleave="zoomOut(event)" />
+						
 				</div>
 				<div class="flex-item">
 					<img alt="" src="./resources/item/5.jpg" onmouseenter="zoomIn(event)"
 						onmouseleave="zoomOut(event)" />
+					
 				</div>
 				</div>
 	</table>
@@ -138,12 +141,14 @@ height: 150px;
 			event.target.style.transform = "scale(1.2)";
 			event.target.style.zIndex = 1;
 			event.target.style.transition = "all 0.5s";
+			event.target.style.opacity =0.5;
 		}
 
 		function zoomOut(event) {
 			event.target.style.transform = "scale(1)";
 			event.target.style.zIndex = 0;
 			event.target.style.transition = "all 0.5s";
+			event.target.style.opacity =1;
 		}
 	</script>
 
