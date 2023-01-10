@@ -23,7 +23,7 @@
 	%>
 		<script>
 				alert("<%=userName%>님 가입 완료 되었습니다.");
-				window.location.href = 'header/header.jsp';
+				window.location.href = 'header.jsp';
 				
 		</script>
 	<%
