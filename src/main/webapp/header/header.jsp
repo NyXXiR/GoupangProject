@@ -10,6 +10,11 @@
 <link rel="stylesheet" href="headerCSS.css" />
 </head>
 <body>
+<%
+Object userID = session.getAttribute("LoginStatus");
+session.invalidate();
+%>
+
 <div id="left-slide-container">
       <div class="close-btn-box">
         <img
@@ -51,10 +56,10 @@
                 /></a>
                 <div class="detail-box">
                   <ul class="drop-menu-1">
-                    <a href="../webapp/myPage.jsp"><li>회원 정보</li></a>
-                    <a href="../webapp/myPage.jsp"><li>메뉴 1</li></a>
-                    <a href="./webapp/myPage.jsp"><li>메뉴 2</li></a>
-                    <a href="./webapp/myPage.jsp"><li>메뉴 3</li></a>
+                    <a href="../myPage.jsp"><li>회원 정보</li></a>
+                    <a href="../myPage.jsp"><li>메뉴 1</li></a>
+                    <a href="../myPage.jsp"><li>메뉴 2</li></a>
+                    <a href="../myPage.jsp"><li>메뉴 3</li></a>
                   </ul>
                 </div>
               </li>
@@ -69,16 +74,15 @@
                 <div class="detail-box2">
                   <ul class="drop-menu-2">
                   <%
-                  Object userID = session.getAttribute("LoginStatus");
-                  if(userID != null || userID != "") {%>
-                	  <a href="#"><li>로그아웃</li></a>
-                  <% } else {
+                  if(userID == null) {%>
+                  	<a href="../login.jsp"><li>로그인</li></a>
+                  <% } else{
                 	  %> 
-                	  <a href="../login.jsp"><li>로그인</li></a>
+                	  <a href="../logout.jsp"><li>로그아웃</li></a>
                 	  <% 
                   }
                   %>
-                    <a href="../webapp/register.jsp"><li>회원가입</li></a>
+                    <a href="../register.jsp"><li>회원가입</li></a>
                   </ul>
                 </div>
               </li>

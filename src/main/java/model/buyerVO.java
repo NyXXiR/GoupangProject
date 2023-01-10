@@ -14,6 +14,14 @@ public class buyerVO {
 	}
 
 	
+	public buyerVO(String buyerId, String buyerPw, String buyerName) {
+		super();
+		this.buyerId = buyerId;
+		this.buyerPw = buyerPw;
+		this.buyerName = buyerName;
+	}
+
+
 	public buyerVO(String buyerSeq, String buyerId, String buyerPw, String buyerName) {
 		super();
 		this.buyerSeq = buyerSeq;

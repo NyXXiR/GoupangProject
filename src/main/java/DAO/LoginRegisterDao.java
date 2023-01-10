@@ -39,9 +39,9 @@ public class LoginRegisterDao {
 		return null;
 	}
 	
-	public int insertEmpTemp(buyerVO buyer){
-		String sql = "insert into buyerdb(buyerdb_seq.nextval, buyer_id, buyer_pw, buyer_name) " +
-					"values (?,?,?)";
+	public int signUpBuyer(buyerVO buyer){
+		String sql = "insert into BUYERDB(BUYER_SEQ, buyer_id, buyer_pw, buyer_name)" +
+					"values (BUYER_SEQ.nextval,?,?,?)";
 		try {
 			PreparedStatement pstm = conn.prepareStatement(sql);
 			pstm.setString(1, buyer.getBuyerId());
