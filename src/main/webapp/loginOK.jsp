@@ -22,7 +22,7 @@
 			%>
 			<script> 
 				alert("<%= request.getParameter("userID")%> 님 환영합니다");
-				window.location.href = 'header/header.jsp';
+				window.location.href = 'header.jsp';
 			</script>
 			<%} else { %>
 				<script>
