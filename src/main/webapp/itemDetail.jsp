@@ -8,7 +8,7 @@
   
   %>  
     
-    
+  
 <!DOCTYPE html>
 <html>
 
@@ -86,7 +86,10 @@ display:flex;}
             <button class="quantity-plus" type="button" onclick="valuePlus(1)">수량  +  </button>
         </div>
         <div class="buy-action">
-        <button class="add-to-cart" type="button" onclick="console.log('장바구니버튼. 1.cartItemDB로 제품id, 수량정보 생성 2.ajax 사용해 장바구니에 담겼습니다 메시지 생성')">장바구니 담기</button>
+      <form action="buyPage.jsp" method="post">
+      <input type="file" value="사진테스트">
+<input type="submit" value="장바구니 담기">
+</form>
 <!--  
 1. 받아야 할 정보들을 모아둔다
 상세정보보기 페이지에서 해당 제품의 itemDB 정보를 미리 받아둬야 편함.
@@ -98,7 +101,10 @@ quantity = .quantity-count의 value값
 2. ajax로 장바구니에 담겼습니다. 팝업과 구매페이지로 이동하기 버튼을 띄운다. 구매하기로 이동하기 버튼은 바로구매에 다시 사용한다.
  -->
 
-       <button class="go-to-buypage" type="button" onclick="console.log('json에 id,quantity 담아 구매페이지로 이동')">바로구매</button>
+<form action="buyPage.jsp" method="post">
+<input type="submit" value="바로구매">
+</form>
+
         </div>
         
 	</div>
@@ -132,11 +138,10 @@ function valuePlus(num){
 function valueMinus(num){
 		var cnt =document.querySelector(".quantity-count");
 		cnt.value= parseInt(cnt.value)-num;
+		if(cnt.value==0){
+			cnt.value=1;}
 	}
 
-function toCartPage(frm){
-	frm.action='cartPage.jsp'
-}
 	
 </script>
 

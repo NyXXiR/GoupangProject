@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
+	<% 
+	byprice ~~ 
+	
+	list = [ 12 3 4 5 ];
+	
+	%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -111,7 +118,7 @@ height: 150px;
 
 		<div class="flex-container-large">
 			<div class="flex-item">
-				<img alt="" src="./resources/item/12.jpg" onmouseenter="zoomIn(event)"
+				<img alt="" src="./resources/item/<%= dfdj.getSeq() %>.jpg" onmouseenter="zoomIn(event)"
 					onmouseleave="zoomOut(event)" />
 			</div>
 			<div class="flex-item">
@@ -133,6 +140,84 @@ height: 150px;
 		</div>
 	</table>
 
+<table>
+		<h1>컨테이너이름입력</h1>
+
+		<div class="flex-container-large">
+			<div class="flex-item">
+				<img alt="" src="./resources/item/12.jpg" onmouseenter="zoomIn(event)"
+					onmouseleave="zoomOut(event)" />
+			</div>
+			<div class="flex-item">
+				<img alt="" src="./resources/item/12.jpg" onmouseenter="zoomIn(event)"
+					onmouseleave="zoomOut(event)" />
+			</div>
+			<div class="flex-item">
+				<img alt="" src="./resources/item/12.jpg" onmouseenter="zoomIn(event)"
+					onmouseleave="zoomOut(event)" />
+			</div>
+			<div class="flex-item">
+				<img alt="" src="./resources/item/13.jpg" onmouseenter="zoomIn(event)"
+					onmouseleave="zoomOut(event)" />
+			</div>
+			<div class="flex-item">
+				<img alt="" src="resources/item/14.jpg" onmouseenter="zoomIn(event)"
+					onmouseleave="zoomOut(event)" />
+			</div>
+		</div>
+	</table>
+	<table>
+		<h1>컨테이너이름입력</h1>
+
+		<div class="flex-container-large">
+			<div class="flex-item">
+				<img alt="" src="./resources/item/12.jpg" onmouseenter="zoomIn(event)"
+					onmouseleave="zoomOut(event)" />
+			</div>
+			<div class="flex-item">
+				<img alt="" src="./resources/item/12.jpg" onmouseenter="zoomIn(event)"
+					onmouseleave="zoomOut(event)" />
+			</div>
+			<div class="flex-item">
+				<img alt="" src="./resources/item/12.jpg" onmouseenter="zoomIn(event)"
+					onmouseleave="zoomOut(event)" />
+			</div>
+			<div class="flex-item">
+				<img alt="" src="./resources/item/13.jpg" onmouseenter="zoomIn(event)"
+					onmouseleave="zoomOut(event)" />
+			</div>
+			<div class="flex-item">
+				<img alt="" src="resources/item/14.jpg" onmouseenter="zoomIn(event)"
+					onmouseleave="zoomOut(event)" />
+			</div>
+		</div>
+	</table>
+	<table>
+		<h1>컨테이너이름입력</h1>
+
+		<div class="flex-container-large">
+			<div class="flex-item">
+				<img alt="" src="./resources/item/12.jpg" onmouseenter="zoomIn(event)"
+					onmouseleave="zoomOut(event)" />
+			</div>
+			<div class="flex-item">
+				<img alt="" src="./resources/item/12.jpg" onmouseenter="zoomIn(event)"
+					onmouseleave="zoomOut(event)" />
+			</div>
+			<div class="flex-item">
+				<img alt="" src="./resources/item/12.jpg" onmouseenter="zoomIn(event)"
+					onmouseleave="zoomOut(event)" />
+			</div>
+			<div class="flex-item">
+				<img alt="" src="./resources/item/13.jpg" onmouseenter="zoomIn(event)"
+					onmouseleave="zoomOut(event)" />
+			</div>
+			<div class="flex-item">
+				<img alt="" src="resources/item/14.jpg" onmouseenter="zoomIn(event)"
+					onmouseleave="zoomOut(event)" />
+			</div>
+		</div>
+	</table>
 	</tr>
 	</table>
 	</div>

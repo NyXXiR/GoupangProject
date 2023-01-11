@@ -4,7 +4,12 @@
 /* 각자 구간에 css 추가해 사용 */
 
 /* 공통 부분(html 전체에 적용되거나 반복되는 부분) */
+*{
+	padding:0px;
+margin:0px;
 
+	
+}
 
 container{}
 .wrapper{
